@@ -6,28 +6,37 @@ class NumberKey extends StatelessWidget {
   final VoidCallback onTap;
   var buttonColor = Colors.transparent;
   var numColor = Colors.black;
-  NumberKey({super.key, required this.child, required this.onTap});
+
+  NumberKey({Key? key, required this.child, required this.onTap})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if(child == "/" || child == "X" || child == "-" || child == "+" || child == "="){
+    if (child == "/" ||
+        child == "x" ||
+        child == "-" ||
+        child == "+" ||
+        child == "=") {
       numColor = Color.fromRGBO(64, 196, 189, 0.767);
     }
     return Padding(
       padding: const EdgeInsets.all(0.0),
-      child: GestureDetector(
+      child: InkWell(
         onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
-              color: buttonColor, borderRadius: BorderRadius.circular(5)),
+            color: buttonColor,
+            borderRadius: BorderRadius.circular(5),
+          ),
           child: Center(
             child: Text(
               child,
               style: TextStyle(
                 color: numColor,
-      fontSize: 22,
-      fontWeight: FontWeight.bold,
-      fontFamily: GoogleFonts.ubuntu().fontFamily),
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+                fontFamily: GoogleFonts.ubuntu().fontFamily,
+              ),
             ),
           ),
         ),

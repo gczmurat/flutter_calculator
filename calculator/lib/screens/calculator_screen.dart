@@ -50,6 +50,7 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
       } else if (button == "=") {
         String finalQuestion = userQuestion;
         finalQuestion = finalQuestion.replaceAll("x", "*");
+        finalQuestion = finalQuestion.replaceAll(",", ".");
         Parser p = Parser();
         Expression exp = p.parse(finalQuestion);
         ContextModel cm = ContextModel();

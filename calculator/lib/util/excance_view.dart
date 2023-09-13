@@ -86,7 +86,7 @@ class _ExcanceViewState extends State<ExcanceView> {
                 Container(
                     child: Center(
                       child: Text(
-                        "1 USD",
+                        "1 EUR",
                         style: Constants.numberText,
                       ),
                     ),
@@ -160,7 +160,7 @@ class _ExcanceViewState extends State<ExcanceView> {
                 Container(
                   child: Center(
                       child: Text(
-                        "26,94 TL",
+                        "1,07 USD",
                         style: Constants.numberText,
                       ),
                     ),

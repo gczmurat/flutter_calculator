@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
               style: Constants.text1,
             ),
             Text(
-              "Exchange",
+              "Excange",
               style: Constants.text1,
             )
           ],

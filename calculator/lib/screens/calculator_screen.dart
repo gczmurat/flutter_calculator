@@ -35,7 +35,6 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
     ",",
     "="
   ];
-  double calculateResult = 0;
 
   void buttonTapped(String button) {
     setState(() {
